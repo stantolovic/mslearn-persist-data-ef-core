@@ -17,7 +17,7 @@ public class PizzaService
     {
         //throw new NotImplementedException();
        // return _context.Pizzas.Include(p => p.Toppings).Include(p => p.Sauce).ToList();
-         return _context.Pizzas.AsNoTracking().ToList();
+         return _context.Pizzas.Include(p => p.Toppings).Include(p => p.Sauce).ToList();
     }
 
     public Pizza? GetById(int id)
